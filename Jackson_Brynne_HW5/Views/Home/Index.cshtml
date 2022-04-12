@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome to the Bevo Online Store!</h1>
+
+<a asp-action="Index" asp-controller="Products" class="btn btn-success">View Our Products</a>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <a asp-action="Index" asp-controller="Orders" class="btn btn-success">View Orders</a>
+}
